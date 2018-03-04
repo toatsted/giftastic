@@ -1,0 +1,18 @@
+html {
+	font-family: sans-serif;
+	text-align: center;
+}
+
+button {
+	margin: 5px;
+}
+
+.animal-div {
+	display: inline-block;
+	border: #000 1px solid;
+	margin: 5px;
+}
+
+#add-animal {
+	margin-top: 5px;
+}
