@@ -15,7 +15,7 @@ $(document).ready(() => {
 		animals.forEach((value, index) => {
 			buttonDiv.append($("<button>")
 				.text(value)
-				.addClass("animal-button"));
+				.addClass("animal-button btn btn-primary"));
 		});
 	}
 

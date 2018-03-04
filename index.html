@@ -12,16 +12,32 @@
 </head>
 <body>
 
-	<div id="buttons"></div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="container">
+				<div id="buttons"></div>
+				
+			</div>
+		</div>
+	
+		<div class="row">
+			<div class="col-8">
+				<div id="gifs"></div>
+				
+			</div>
+			<div class="col-4">
+				<form id="animal-form">
+					<label for="animal-input">Add an animal</label>
+					<input type="text" id="animal-input"><br>
 
-	<form id="animal-form">
-		<label for="animal-input">Add an animal</label>
-		<input type="text" id="animal-input"><br>
+					<input class="btn btn-primary" id="add-animal" type="submit" value="Submit">
+				</form>
+				
+			</div>
 
-		<input id="add-animal" type="submit" value="Submit">
-	</form>
+		</div>
 
-	<div id="gifs"></div>
+	</div>
 
 
 	<!-- jquery and ajax -->
