@@ -1,18 +1,18 @@
 $(document).ready(() => {
 
-	let animals = ["cat", "horse", "dog", "fish"];
+	let topics = ["cats", "cars", "dogs", "airplanes"];
 
-	$("#add-animal").on("click", function(event) {
+	$("#submit-button").on("click", function(event) {
 		event.preventDefault();
-		let animal = $("#animal-input").val().trim();
-		$("#animal-input").val("");
-		animals.push(animal);
+		let animal = $("#input").val().trim();
+		$("#input").val("");
+		topics.push(animal);
 		renderButtons();
 	});
 
 	function renderButtons() {
 		let buttonDiv = $("#buttons").empty();
-		animals.forEach((value, index) => {
+		topics.forEach((value, index) => {
 			buttonDiv.append($("<button>")
 				.text(value)
 				.addClass("animal-button btn btn-primary"));
@@ -23,7 +23,7 @@ $(document).ready(() => {
 		$("#gifs").empty();
 		let btn = $(this);
 
-		let queryURL = "https://api.giphy.com/v1/gifs/search" + 
+		let queryURL = "https://api.giphy.com/v1/gifs/search" +
 			"?api_key=oN5N5nfVB5JFrvXamobIf4S9TTbt6d3F" +
 			"&limit=10" +
 			"&q=" + btn.text();
@@ -59,10 +59,10 @@ $(document).ready(() => {
 
 		let btn = $(this);
 
-		if(btn.attr("data-playing") === "still"){
+		if (btn.attr("data-playing") === "still") {
 			btn.attr("data-playing", "gif");
 			btn.attr("src", btn.attr("data-gifURL"));
-		}else {
+		} else {
 			btn.attr("data-playing", "still");
 			btn.attr("src", btn.attr("data-stillURL"));
 		}
