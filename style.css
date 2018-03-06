@@ -21,4 +21,6 @@ form {
 	border: #000 1px solid;
 	padding: 5px;
 	width: 300px;
+	border-radius: 12px;
 }
+
